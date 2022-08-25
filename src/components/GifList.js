@@ -17,7 +17,7 @@ export const GifList = ({ params }) => {
 	if (loading) return <i>Loading ⭕️</i>;
 
 	return (
-		<div>
+		<div className=''>
 			{gifs.map(({ title, id, url }) => (
 				<Gif
 					key={id}

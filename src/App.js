@@ -2,14 +2,17 @@ import './App.css';
 
 import { GifList } from './components/GifList';
 import { Route, Link } from 'wouter';
+import Home from './pages/Home';
 
 function App() {
 	return (
 		<div className="App">
 			<section className="App-content">
-				<Link to="/gif/colombia">Gif de colombia</Link>
-				<Link to="/gif/goku">Gif de Gokú</Link>
-				<Link to="/gif/rick">Gif de Rick</Link>
+				<Link to="/">🏠 Inicio</Link>
+				<Route
+					path="/"
+					component={Home}
+				/>
 				<Route
 					path="/gif/:keyword"
 					component={GifList}
